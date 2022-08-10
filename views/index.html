@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://jsuites.net/v4/jsuites.js"></script>
+    <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+</head>
+<style>
+    .coolor{
+        background-color: #0070ba;
+        font-weight: bold;
+    }
+
+    .mx-2{
+        margin: 0 2rem;
+    }
+    .mx-1{
+        margin: 0 1rem;
+    }
+</style>
+<br><br>
+<body>
+
+    <div class="card-panel mx-2">
+        <div class="row">
+            <div class="col s4" id="smart-button-container">
+                <div style="text-align: left;">
+                    <div id="paypal-button-container"></div>
+                </div>
+            </div>
+
+            
+            <div class="col s8">
+                <h4>Fecha inicial</h4>
+                    <input type="date" class="form-control" id="datefilterfrom" data-date-split-input="true">
+
+                <h4>Fecha final</h4>
+                    <input type="date" class="form-control" id="datefilterto" data-date-split-input="true">
+                    <br><br>
+                    <a class="waves-effect coolor btn-large" id="boton">Filtrar por rango de fechas</a>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="mx-2">
+        <table class=" card-panel striped responsive-table " class="black-text" id="testTable">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Paypal_order_ID</th>
+                    <th>paypal_payer_id</th>
+                    <th>paypal_payer_email</th>
+                    <th>paypal_country_code</th>
+                    <th>paypal_amount</th>
+                    <th>paypal_currency</th>
+                    <th>status</th>
+                    <th>created_date</th>
+                </tr>
+            </thead>
+            <tbody id="idBody" style="border: none;">
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="https://www.paypal.com/sdk/js?client-id=AQXMLUJyUx3bppCIxTScAuH49buzvVGirD5dDfwqiIGVkpjbuyBTjjunlUhbWQxZGlcWFte8Xp2CiD3L&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
+    <script src="../scripts/index.js"></script>
+</body>
+</html>
